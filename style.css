@@ -1,0 +1,521 @@
+/* even wat standaard css dingetjes */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 0; margin: 0;
+    text-align: center;
+    width: 100vw;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    max-width: 400px;
+    font-size: .8em;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@media (min-width:800px){
+    p {
+        max-width: 650px;
+        font-size: 1em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img, video {
+    width: 100vw;
+}
+
+/* Header */
+
+header video {
+    height: 100vh;
+    background-color: black;
+}
+
+header div{
+position: absolute;
+width: 100vw;
+margin-top: 10%;
+}
+
+header img {
+    margin-top: 9%;
+    text-align:center;
+    width: 40%;
+    max-width: 300px;
+}
+
+header h1 {
+font-weight: 600;
+font-size: 1.6em;
+}
+
+header p,h1 {
+    color:white;
+}
+
+/* CTA */
+
+header .button1 {
+    background-color: #2031D5;
+    border: solid #2031D5 1px;
+    border-radius: 1em;
+    width: 10em;
+    margin: auto; padding: .25em;
+    margin-top: 6%;
+    font-size: .8em;
+    transition: .5s ease-out;
+    
+}
+
+.button1:hover {
+    background-color: white;
+    color: #2031D5;
+    border: solid #2031D5 1px;
+    transition: .5s ease-out;
+}
+
+header p {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* NAVIGATIE */
+header nav {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: .1px .1px 8px black;
+}
+
+header nav ul li {
+    list-style-type: none;
+    color:black;
+    display: inline;
+    margin-right: 30px;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+header nav ul li:hover {
+border-bottom: solid black 1px;
+}
+
+/* Container 1 - First timer en Amsterdam oud-zuid, gepositioneerd in web browser */
+
+
+#container1 h3:first-of-type {
+    font-weight: 600;
+    font-size: .8em;
+}
+
+
+#container1 {
+    position: relative;
+    width: 95vw;
+    height: 300px;
+    margin: 3em auto;
+}
+
+@media (min-width:850px){ 
+    #container1 {
+        height: 400px;
+        width: 85vw;
+    }
+    #container1 h3:first-of-type {
+    font-size: 1em;
+    }   
+}
+
+@media(max-width: 400px) {
+    #container1 {
+        display: inline-block;
+    }
+}
+
+
+#container1 div {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container1 .left {
+    position: absolute;
+    left:0;
+    background-image:url(images/kleedkamer.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    transition: .4s;
+}
+
+#container1 .left-p2 {
+    position: absolute;
+    left:0;
+    background-image:url(images/gym4.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    transition: .4s;
+}
+
+#container1 .right {
+    position: absolute;
+    right:0;
+    background-image: url(images/gym5.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    transition: .4s;
+}
+
+#container1 .right-p2 {
+    position: absolute;
+    right:0;
+    background-image: url(images/bar2.png);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    transition: .4s;
+}
+
+/* Container 1 - Voor de JS Class activeren */
+
+#container1 .breed {
+    width:70%;
+}
+
+#container1 .small {
+    width:30%;
+}
+
+/* Container 1 - teksten positioneren */
+
+#container1 .left h3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    text-shadow: black 1px 0 10px;
+}
+
+#container1 .left-p2 h3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    text-shadow: black 1px 0 10px;
+}
+
+#container1 .right h3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    text-shadow: black 1px 0 10px;
+}
+
+#container1 .right-p2 h3 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    text-shadow: black 1px 0 10px;
+}
+
+#container1 .left p a {
+    display: none;
+    font-size: .8em;
+    grid-column-start: 2;
+    grid-row-start: 4;
+
+}
+
+#container1 .right p a {
+    display: none;
+    font-size: .8em;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+/* Tribe + button */
+
+.button2 {
+    background-color: #2031D5;
+    border: solid #2031D5 1px;
+    border-radius: .1em;
+    width: 10em;
+    margin: auto; padding: .5em;
+    margin-top: 6%;
+    color: white;
+    transition: .5s ease-out;
+}
+
+.button2:hover {
+    background-color: white;
+    color: #2031D5;
+    transition: ease-out;
+    border: solid #2031D5 1px;
+}
+
+
+
+#tribe {
+    margin-top: 5%;
+}
+
+/* Our concepts */
+
+#concept {
+    margin-top: 7%;
+}
+
+#concept p {
+    margin-bottom: 7%;
+}
+
+/* Container 2 - slider */
+
+#container2 {
+    margin: auto;
+    width: 90vw;
+    height: 500px;
+    display: flex;
+    color: white;
+}
+
+#container2 div {
+    position: relative;
+    width: 33.33333%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container2 .img1 {
+    background-image: url(images/holybooty.png);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#container2 .img2 {
+    background-image: url(images/gym3.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#container2 .img3 {
+    background-image: url(images/gym2.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#container2 .img1 h3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+#container2 .img2 h3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+#container2 .img3 h3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+#container2 h3 {
+    font-weight: 600;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#container2 p {
+    width: 90%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    font-size: .8em;
+    text-align: left;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 700px){
+    #container2 p {
+    display: none;
+    }
+}
+
+#concept img {
+    margin: 1em 0;
+    width: 3%;
+    position: absolute;
+    left: 50px;
+}
+
+/* Container 3 - afbeelding met tekst */
+
+#container3 {
+    width: 90vw;
+    height: 500px;
+    margin: auto;
+    margin-top: 7%;
+    color: white;
+    background-color: black;
+    background-image: url(images/gym1.jpg); /* Dit werkt niet met de gradient zoals ik het wil*/
+    background-size: cover;
+    background-position: center center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 3em;
+}
+
+#container3 h2 {
+    font-size: 3em;
+    font-weight: 500;
+    padding-left: 15px;
+    text-align: left;
+    line-height: 1.5em;
+    grid-row-start: 2;
+    border-bottom: solid white 4px;
+    border-top: solid white 4px;
+    display: inline block;
+    margin: 0;
+}
+
+#container3 h3 {
+    max-width: 30em;
+    padding-left: 15px;
+    text-align: left;
+    grid-row-start: 4;
+    font-weight: 200;
+    font-size: 1em;
+}
+
+#container3 h2 span {
+    display: block;
+    border: solid white 1px;
+}
+
+#container3 .button3 {
+    grid-row-start: 6;
+    background-color: #2031D5;
+    border: solid #2031D5 1px;
+    border-radius: .1em;
+    width: 8em;
+    margin: 0 -20px; padding: .5em;
+    margin-top: 6%;
+    color: white;
+    text-align: center;
+}
+
+#container3 .button3:hover {
+    transform-origin:left;
+    background-color: white;
+    color: #2031D5;
+    border: solid #2031D5 1px;
+}
+
+#container3 .button3 img {
+    width:27%;
+    padding-right: 10px;
+}
+  
+/* Footer */
+
+footer { 
+    background-color: #F1F1F1;
+    padding: 3em;
+}
+
+footer li {
+    list-style: none;
+    font-size: .8em;
+    margin-right: 20px;
+    border-bottom: solid #F1F1F1 .5px;
+}
+
+footer, li:hover {
+    border-bottom: solid black .5px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 4em;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    font-size: .6em;
+    padding: 2em;
+    line-height: 2em;
+    color: grey;
+}
+
+footer form label {
+    display: block;
+    font-size: .8em;
+    margin-bottom: 1em;
+}
+
+footer form #submitbutton {
+    background-color: #2031D5;
+    border: none;
+    border-radius: .1em;
+    width: 4em;
+    margin-left: -5px;
+    padding: .5em;
+    color: white;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+footer form #emailtext {
+    padding: .5em;
+    border: none;
+    width: 15em;
+    border-radius: 5px;
+}
